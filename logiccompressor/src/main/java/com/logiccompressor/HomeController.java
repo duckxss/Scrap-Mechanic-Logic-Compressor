@@ -176,7 +176,7 @@ public class HomeController {
             // Handle invalid number input
             System.err.println("Please enter valid integer values for X, Y, and Z");
         }
-        newStage("download", 640, 480, "blueprint.json");
+        newStage("download", 640, 480, "Download your compressed blueprint here");
     }
 
     private void newStage(String fxml, int width, int height, String title) throws IOException{

@@ -15,6 +15,13 @@
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
+    <!-- Warning text -->
+    <Label text="***WARNING: MAKE A BACKUP BEFORE CONTINUING***" 
+        wrapText="true"
+        maxWidth="600"
+        styleClass="label-warning"
+    />
+
     <GridPane fx:id="boundsGrid" hgap="10" vgap="10">
         <columnConstraints>
             <ColumnConstraints hgrow="NEVER" minWidth="80" />
@@ -37,7 +44,7 @@
     </GridPane>
     
     <!-- Warning text -->
-    <Label text="WARNING: Using custom bounds can lead to strange sizes. Ensure that bounds are larger than and close to the minimum size your blueprint will fit into" 
+    <Label text="Using custom bounds can lead to strange sizes. Ensure that bounds are larger than and close to the minimum size your blueprint will fit into" 
         wrapText="true"
         maxWidth="600"
         styleClass="label-warning"

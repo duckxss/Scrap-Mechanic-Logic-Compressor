@@ -40,6 +40,7 @@
         <Button text="Save File" 
         onAction="#handleSaveFile"
         GridPane.columnIndex="1" GridPane.rowIndex="0"
+        alignment="CENTER_RIGHT"
         />
 
         <Label text="Copy .json as text" 

@@ -18,7 +18,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         
-        scene = new Scene(loadFXML("home"), 640, 480);
+        scene = new Scene(loadFXML("home"), 640, 520);
         scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
 
         stage.setTitle("Scrap Mechanic Logic Compressor");
