@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.logiccompressor.HomeController"
+      spacing="10"
+      prefWidth="600"
+      alignment="CENTER">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <GridPane fx:id="boundsGrid" hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="80" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+
+        <Label text="Either use custom bounds for desired compressed size or let the program find the smallest cube your blueprint will fit into" 
+        wrapText="true"
+        maxWidth="600"
+        styleClass="label-field"
+        GridPane.columnIndex="0" GridPane.rowIndex="0"
+        />
+
+        <!-- Separator line -->
+        <CheckBox fx:id="toggleInputs" text="Use custom bounds for compressed size" 
+        GridPane.columnIndex="0" GridPane.rowIndex="1"
+        />
+
+        
+    </GridPane>
+    
+    <!-- Warning text -->
+    <Label text="WARNING: Using custom bounds can lead to strange sizes. Ensure that bounds are larger than and close to the minimum size your blueprint will fit into" 
+        wrapText="true"
+        maxWidth="600"
+        styleClass="label-warning"
+        fx:id="warningText"
+    />
+
+    <!-- Integer inputs -->
+    <GridPane fx:id="boundsGrid" hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="80" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+
+        <!-- X input -->
+        <Label text="X:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="xInput" promptText="Enter desired compressed X value" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <!-- Y input -->
+        <Label text="Y:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="yInput" promptText="Enter desired compressed Y value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <!-- Z input -->
+        <Label text="Z:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="zInput" promptText="Enter desired compressed Z value" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    </GridPane>
+
+    <Separator />
+
+     <!-- Checkbox options at the top -->
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <CheckBox fx:id="sortCounterBlocks" text="Sort Counter Blocks" />
+        <CheckBox fx:id="sortSmartEngines" text="Sort Smart Engines" />
+        <CheckBox fx:id="sortButtonsSwitches" text="Sort Buttons/Switches" />
+    </HBox>
+    
+    <Separator />
+
+    <!-- File input -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Upload your scrap mechanic blueprint file here. It should be at C:\Users\yourname\AppData\Roaming\Axolot Games\Scrap Mechanic\User\User_usernumber\Blueprints\blueprint-UUID\blueprint.json" 
+        wrapText="true"
+        maxWidth="600"
+        styleClass="label-field"
+        />
+    </HBox>
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Upload File:"/>
+        <TextField fx:id="filePathField" HBox.hgrow="ALWAYS" editable="false" />
+        <Button text="Browse..." onAction="#handleBrowseAction"/>
+    </HBox>
+
+    <!-- Submit button -->
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="Submit" onAction="#handleSubmitAction" styleClass="submit-button" />
+    </HBox>
+
+</VBox>

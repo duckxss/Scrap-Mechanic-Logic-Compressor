@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" 
+    spacing="20.0"
+    xmlns="http://javafx.com/javafx/8.0.171" 
+    xmlns:fx="http://javafx.com/fxml/1" 
+    fx:controller="com.logiccompressor.DownloadController"
+    >
+
+    <Label text="Your File is Ready!"/>
+    <Label text="Either download the file to your scrap mechanic blueprint folder or copy the .json text and replace the old .json text in the blueprint.json file" 
+        wrapText="true"
+        maxWidth="600"
+        styleClass="label-field"
+        />
+
+    <GridPane fx:id="downloadGrid" hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="80" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+
+        <Label text="Download blueprint.json to destination" 
+        wrapText="true"
+        maxWidth="600"
+        GridPane.columnIndex="0" GridPane.rowIndex="0"
+        />
+
+        <Button text="Save File" 
+        onAction="#handleSaveFile"
+        GridPane.columnIndex="1" GridPane.rowIndex="0"
+        />
+
+        <Label text="Copy .json as text" 
+        wrapText="true"
+        maxWidth="600"
+        GridPane.columnIndex="0" GridPane.rowIndex="1"
+        />
+
+        <Button text="Copy Text" 
+        onAction="#handleCopyText"
+        GridPane.columnIndex="1" GridPane.rowIndex="1"
+        />
+    </GridPane>
+
+    <ScrollPane fitToWidth="true" prefHeight="400" prefWidth="600" fx:id="copyBox" visible="false">
+        <content>
+            <Text fx:id="jsonText"
+                wrappingWidth="580"
+                styleClass="label-field"
+                text="There was an error"
+                visible="false"
+                />
+        </content>
+    </ScrollPane>
+
+   
+</VBox>

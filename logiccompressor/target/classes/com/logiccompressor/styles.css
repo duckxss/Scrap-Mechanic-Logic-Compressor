@@ -1,0 +1,102 @@
+/* Root container styling */
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 20;
+}
+
+/* Label styling */
+.label {
+    -fx-text-fill: #333333;
+    -fx-font-weight: normal;
+}
+
+/* Label styling */
+.label-field {
+    -fx-font-size: 12px;
+    -fx-text-fill: #535353;
+    -fx-font-weight: normal;
+}
+
+/* Label styling */
+.label-warning {
+    -fx-font-size: 14px;
+    -fx-text-fill: #b12121;
+    -fx-font-weight: bold;
+}
+
+/* Text input fields */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 6 10;
+}
+
+/* Focused input field */
+.text-field:focused {
+    -fx-border-color: #0066cc;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #0078d4;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: #005fa3;
+}
+
+/* Default CheckBox styling */
+.check-box {
+    -fx-text-fill: #333;
+    -fx-font-weight: 500;
+    -fx-padding: 4 0 4 0;
+}
+
+/* CheckBox mark when checked */
+.check-box:selected .box {
+    -fx-background-color: #0078d4;
+    -fx-border-color: #0078d4;
+}
+
+/* CheckBox mark (unchecked) */
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #999;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-padding: 4;
+}
+
+/* Hover effect */
+.check-box:hover .box {
+    -fx-border-color: #555;
+}
+
+/* Check mark inside the box */
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+/* Disabled state */
+.check-box:disabled {
+    -fx-opacity: 0.6;
+}
+
+/* Custom submit button style (optional) */
+.submit-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+}
+
+.submit-button:hover {
+    -fx-background-color: #218838;
+}
